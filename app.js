@@ -69,6 +69,20 @@ selectNavItems.forEach((item) => {
 // project data
 const projectData = [
   {
+    id: "project6",
+    title: "Hotel Bookings",
+    frame: ["Full-Stack", 2023],
+    primaryText:
+      "Hotel Bookings project built using Go and postgresql is likely a web application that allows users to search for available hotels, view room details, and make reservations.",
+    tags: ["HTML", "CSS", "Javascript", "Golang", "PostgreSQL"],
+    imageUrl:
+      "https://user-images.githubusercontent.com/35267447/223337938-c8ab34f0-20c6-4d8e-b47a-10558d3c7beb.PNG",
+    projectDetails:
+      "Hotel Bookings project built using Go and postgresql is likely a web application that allows users to search for available hotels, view room details, and make reservations. It may include features such as user authentication, and integration with third-party APIs for displaying hotel information and availability.",
+    liveLink: "https://github.com/raihan2bd/hotel-bookings",
+    sourceLink: "https://github.com/raihan2bd/hotel-bookings",
+  },
+  {
     id: "project5",
     title: "RSL Media",
     frame: ["Microverse", "Frontend", 2023],
