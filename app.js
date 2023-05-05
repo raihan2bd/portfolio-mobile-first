@@ -83,6 +83,20 @@ const projectData = [
     sourceLink: "https://github.com/raihan2bd/hotel-bookings",
   },
   {
+    id: "project7",
+    title: "BookStore",
+    frame: ["Microverse", "Frontend", 2023],
+    primaryText:
+      "Book Store is a Microverce React MVP project. Using this project user can read a book. User can see a book list. User can update a book. And also User can delete book from the book list.",
+    tags: ["HTML", "CSS", "Javascript", "React", "Redux"],
+    imageUrl:
+      "https://user-images.githubusercontent.com/35267447/214837157-45734f12-5466-4238-9e15-d4b68eb66c9b.png",
+    projectDetails:
+      "Book Store is a Microverse React MVP project that enables users to read books and manage their reading lists. With this project, users can view a list of available books, update book details, and remove books from their reading list as needed, providing a simple and convenient platform for managing their reading interests",
+    liveLink: "https://book-store-1ok9.onrender.com/",
+    sourceLink: "https://github.com/raihan2bd/book-store",
+  },
+  {
     id: "project6",
     title: "Weather APP",
     frame: ["Microverse", "Frontend", 2023],
