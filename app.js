@@ -69,7 +69,7 @@ selectNavItems.forEach((item) => {
 // project data
 const projectData = [
   {
-    id: "project6",
+    id: "project8",
     title: "Hotel Bookings",
     frame: ["Full-Stack", 2023],
     primaryText:
@@ -81,6 +81,20 @@ const projectData = [
       "Hotel Bookings project built using Go and postgresql is likely a web application that allows users to search for available hotels, view room details, and make reservations. It may include features such as user authentication, and integration with third-party APIs for displaying hotel information and availability.",
     liveLink: "https://github.com/raihan2bd/hotel-bookings",
     sourceLink: "https://github.com/raihan2bd/hotel-bookings",
+  },
+  {
+    id: "project6",
+    title: "Weather APP",
+    frame: ["Microverse", "Frontend", 2023],
+    primaryText:
+      "Weather-Forecast is a Microverce React capstone project. Using this project users can see a list of countries in a particular region with country details and also see the weather of that country.",
+    tags: ["HTML", "CSS", "Javascript", "React", "Redux"],
+    imageUrl:
+      "https://user-images.githubusercontent.com/35267447/217789912-ead664b3-086f-4de2-8df8-e0229f60ae8a.PNG",
+    projectDetails:
+      "Weather-Forecast is a Microverse React capstone project that allows users to view a list of countries in a selected region along with country details. Additionally, users can also view the weather information for a selected country, providing a comprehensive picture of weather patterns and travel information for their destination of interest.",
+    liveLink: "https://weather-forecast-0xbe.onrender.com/",
+    sourceLink: "https://github.com/raihan2bd/weather-forecast",
   },
   {
     id: "project5",
