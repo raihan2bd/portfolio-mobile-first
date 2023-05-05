@@ -69,6 +69,20 @@ selectNavItems.forEach((item) => {
 // project data
 const projectData = [
   {
+    id: "project9",
+    title: "Hungry Hub",
+    frame: ["E-commerce", "Frontend", 2023],
+    primaryText:
+      "Hungry Hub is a React-based platform for online food ordering and delivery. Browse restaurant menus, add items to your cart, and securely place orders for home delivery.",
+    tags: ["HTML", "CSS", "Javascript", "React", "Redux", "Firebase"],
+    imageUrl:
+      "https://user-images.githubusercontent.com/35267447/223940500-3aea07b1-4bc6-4705-ae49-e64f96544b44.PNG",
+    projectDetails:
+      "Hungry Hub is an online platform built using React, Redux, and Firebase, which allows users to browse and cart food items from a variety of restaurants and place orders for home delivery. Users can sign up, browse the menus of different restaurants, add food items to their cart, and proceed to checkout. The platform integrates with Firebase to provide secure payment options and order tracking for users. With Hungry Hub, users can enjoy the convenience of online food ordering and get their favorite meals delivered straight to their doorstep.",
+    liveLink: "https://hungry-hub.onrender.com/",
+    sourceLink: "https://github.com/raihan2bd/hungry-hub",
+  },
+  {
     id: "project8",
     title: "Hotel Bookings",
     frame: ["Full-Stack", 2023],
