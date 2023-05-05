@@ -1,22 +1,14 @@
 {
-  "name": "portfolio-mobile-first-project",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
-  "main": "index.js",
+  "description": "> A simple and basic responsive mobile first portfolio project using basic html, and css.",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raihan2bd/portfolio-mobile-first.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/raihan2bd/portfolio-mobile-first/issues"
-  },
-  "homepage": "https://github.com/raihan2bd/portfolio-mobile-first#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
