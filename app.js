@@ -12,7 +12,9 @@ const hArr = heading.split(' ');
 let typeCount = 1;
 function typeWriter() {
   if (typeCount < hArr.length) {
-    document.querySelector('.type-animation').innerHTML += ` ${hArr[typeCount]}`;
+    document.querySelector(
+      '.type-animation',
+    ).innerHTML += ` ${hArr[typeCount]}`;
     typeCount += 1;
     setTimeout(typeWriter, 200);
   }
@@ -32,7 +34,9 @@ window.onscroll = () => {
     if (top >= offset && top < height + offset) {
       navLinks.forEach((link) => {
         link.classList.remove('active');
-        document.querySelectorAll(`a[href*=${id}]`).forEach((item) => item.classList.add('active'));
+        document
+          .querySelectorAll(`a[href*=${id}]`)
+          .forEach((item) => item.classList.add('active'));
       });
     }
   });
@@ -65,13 +69,85 @@ selectNavItems.forEach((item) => {
 // project data
 const projectData = [
   {
+    id: 'project9',
+    title: 'Hungry Hub',
+    frame: ['E-commerce', 'Frontend', 2023],
+    primaryText:
+      'Hungry Hub is a React-based platform for online food ordering and delivery. Browse restaurant menus, add items to your cart, and securely place orders for home delivery.',
+    tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Firebase'],
+    imageUrl:
+      'https://user-images.githubusercontent.com/35267447/223940500-3aea07b1-4bc6-4705-ae49-e64f96544b44.PNG',
+    projectDetails:
+      'Hungry Hub is an online platform built using React, Redux, and Firebase, which allows users to browse and cart food items from a variety of restaurants and place orders for home delivery. Users can sign up, browse the menus of different restaurants, add food items to their cart, and proceed to checkout. The platform integrates with Firebase to provide secure payment options and order tracking for users. With Hungry Hub, users can enjoy the convenience of online food ordering and get their favorite meals delivered straight to their doorstep.',
+    liveLink: 'https://hungry-hub.onrender.com/',
+    sourceLink: 'https://github.com/raihan2bd/hungry-hub',
+  },
+  {
+    id: 'project8',
+    title: 'Hotel Bookings',
+    frame: ['Full-Stack', 2023],
+    primaryText:
+      'Hotel Bookings project built using Go and postgresql is likely a web application that allows users to search for available hotels, view room details, and make reservations.',
+    tags: ['HTML', 'CSS', 'Javascript', 'Golang', 'PostgreSQL'],
+    imageUrl:
+      'https://user-images.githubusercontent.com/35267447/223337938-c8ab34f0-20c6-4d8e-b47a-10558d3c7beb.PNG',
+    projectDetails:
+      'Hotel Bookings project built using Go and postgresql is likely a web application that allows users to search for available hotels, view room details, and make reservations. It may include features such as user authentication, and integration with third-party APIs for displaying hotel information and availability.',
+    liveLink: 'https://github.com/raihan2bd/hotel-bookings',
+    sourceLink: 'https://github.com/raihan2bd/hotel-bookings',
+  },
+  {
+    id: 'project7',
+    title: 'BookStore',
+    frame: ['Microverse', 'Frontend', 2023],
+    primaryText:
+      'Book Store is a Microverce React MVP project. Using this project user can read a book. User can see a book list. User can update a book. And also User can delete book from the book list.',
+    tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux'],
+    imageUrl:
+      'https://user-images.githubusercontent.com/35267447/214837157-45734f12-5466-4238-9e15-d4b68eb66c9b.png',
+    projectDetails:
+      'Book Store is a Microverse React MVP project that enables users to read books and manage their reading lists. With this project, users can view a list of available books, update book details, and remove books from their reading list as needed, providing a simple and convenient platform for managing their reading interests',
+    liveLink: 'https://book-store-1ok9.onrender.com/',
+    sourceLink: 'https://github.com/raihan2bd/book-store',
+  },
+  {
+    id: 'project6',
+    title: 'Weather APP',
+    frame: ['Microverse', 'Frontend', 2023],
+    primaryText:
+      'Weather-Forecast is a Microverce React capstone project. Using this project users can see a list of countries in a particular region with country details and also see the weather of that country.',
+    tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux'],
+    imageUrl:
+      'https://user-images.githubusercontent.com/35267447/217789912-ead664b3-086f-4de2-8df8-e0229f60ae8a.PNG',
+    projectDetails:
+      'Weather-Forecast is a Microverse React capstone project that allows users to view a list of countries in a selected region along with country details. Additionally, users can also view the weather information for a selected country, providing a comprehensive picture of weather patterns and travel information for their destination of interest.',
+    liveLink: 'https://weather-forecast-0xbe.onrender.com/',
+    sourceLink: 'https://github.com/raihan2bd/weather-forecast',
+  },
+  {
+    id: 'project5',
+    title: 'RSL Media',
+    frame: ['Microverse', 'Frontend', 2023],
+    primaryText:
+      'RSL Media is a Microverse group project that offers an online entertainment streaming source for TV shows and movies. It leverages an external tvmaze API service to preserve data.',
+    tags: ['HTML', 'CSS', 'Javascript'],
+    imageUrl:
+      'https://raw.githubusercontent.com/raihan2bd/js-capstone/main/src/assets/img/home.png',
+    projectDetails:
+      'The RSL Media project is a Microverse group project that offers users an online entertainment streaming source for TV shows and movies. The project leverages an external tvmaze API service to preserve data related to various TV shows and movies. The platform allows users to add likes to their favorite shows and add comments to share their thoughts with other users. Additionally, users can reserve a show they want to watch later. Overall, the project provides a streamlined and convenient way for users to discover and enjoy their favorite TV shows and movies while engaging with a community of fellow enthusiasts.',
+    liveLink: 'https://raihan2bd.github.io/js-capstone/',
+    sourceLink: 'https://github.com/raihan2bd/js-capstone',
+  },
+  {
     id: 'project1',
     title: 'Todolist',
     frame: ['Microverse', 'Frontend', 2022],
-    primaryText: 'To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
+    primaryText:
+      'To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
     tags: ['HTML', 'CSS', 'Javascript'],
     imageUrl: './images/todo-list-js.png',
-    projectDetails: 'This is A simple but effective and responsive (mobile first) Microverse exercise project. To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
+    projectDetails:
+      'This is A simple but effective and responsive (mobile first) Microverse exercise project. To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
     liveLink: 'https://raihan2bd.github.io/Todo-List/',
     sourceLink: 'https://github.com/raihan2bd/Todo-List',
   },
@@ -79,10 +155,12 @@ const projectData = [
     id: 'project2',
     title: 'Awesome Book',
     frame: ['Microverse', 'Front-End', 2022],
-    primaryText: 'Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list.',
+    primaryText:
+      'Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list.',
     tags: ['HTML', 'CSS', 'Javascript'],
     imageUrl: './images/awesome-book-js1.png',
-    projectDetails: 'This is A simple but effective and responsive (mobile first) Microverse exercize project. Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list.',
+    projectDetails:
+      'This is A simple but effective and responsive (mobile first) Microverse exercize project. Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list.',
     liveLink: 'https://raihan2bd.github.io/Awesome-Books/',
     sourceLink: 'https://github.com/raihan2bd/Awesome-Books',
   },
@@ -90,10 +168,12 @@ const projectData = [
     id: 'project3',
     title: 'Full-Stack Bootcamp',
     frame: ['Microverse', 'Front-End', 2022],
-    primaryText: 'This is A simple but effective and responsive (mobile first) Microverse Capstone Project 1. The theme about this project is a online full stack webdevelopment bootcamp.',
+    primaryText:
+      'This is A simple but effective and responsive (mobile first) Microverse Capstone Project 1. The theme about this project is a online full stack webdevelopment bootcamp.',
     tags: ['HTML', 'CSS', 'Javascript'],
     imageUrl: './images/code-with-raihan-js.png',
-    projectDetails: 'This is A simple but effective and responsive (mobile first) Microverse Capstone Project 1. The theme about this project is a online full stack webdevelopment bootcamp. Boost your career joining our highly professional fullstack Bootcamp and start a remote international fulltime job. Through out this Bootcamp your learning path will be practical and beginner friendly.',
+    projectDetails:
+      'This is A simple but effective and responsive (mobile first) Microverse Capstone Project 1. The theme about this project is a online full stack webdevelopment bootcamp. Boost your career joining our highly professional fullstack Bootcamp and start a remote international fulltime job. Through out this Bootcamp your learning path will be practical and beginner friendly.',
     liveLink: 'https://raihan2bd.github.io/code-with-raihan/',
     sourceLink: 'https://github.com/raihan2bd/code-with-raihan/',
   },
@@ -101,10 +181,12 @@ const projectData = [
     id: 'project4',
     title: 'Contact Manager',
     frame: ['Microverse', 'Front-End', 2018],
-    primaryText: 'Simple contract manager app using Javascript, Html and css. I fetch contact form another external api using axios and display them on the dom using javascript.',
+    primaryText:
+      'Simple contract manager app using Javascript, Html and css. I fetch contact form another external api using axios and display them on the dom using javascript.',
     tags: ['HTML', 'CSS', 'Javascript'],
     imageUrl: './images/contact-manager.png',
-    projectDetails: 'Simple contract manager app using Javascript, Html and css. I fetch contact form another external api using axios and display them on the dom using javascript.',
+    projectDetails:
+      'Simple contract manager app using Javascript, Html and css. I fetch contact form another external api using axios and display them on the dom using javascript.',
     liveLink: 'https://raihan2bd.github.io/contactmanager/#/',
     sourceLink: 'https://github.com/raihan2bd/contactmanager',
   },
@@ -207,7 +289,13 @@ function fetchOnePoject(id) {
     projectBlock.append(leftBlock, rightBlock);
 
     // appending article-modal
-    articleModal.append(crossIcon, workTitle, workInfo, articleImage, projectBlock);
+    articleModal.append(
+      crossIcon,
+      workTitle,
+      workInfo,
+      articleImage,
+      projectBlock,
+    );
 
     // appending article-modal to article
     article.append(articleModal);
