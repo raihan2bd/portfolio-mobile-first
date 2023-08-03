@@ -183,7 +183,6 @@ a:hover {
 
 .headline_title {
   font-size: 40px;
-  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   color: #172b4d;
@@ -662,7 +661,7 @@ a:hover {
   }
 
   .headline {
-    min-height: 916px;
+    min-height: 600px;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
