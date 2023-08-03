@@ -347,7 +347,7 @@ a:hover {
 .about {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  gap: 1rem;
   padding: 0 15px;
   background-color: #fff;
   border-top-right-radius: 70px;
@@ -355,6 +355,11 @@ a:hover {
 
 .about-myself {
   flex: 1;
+}
+
+.space {
+  display: block;
+  padding: 1rem;
 }
 
 .about_ul {
@@ -391,6 +396,21 @@ a:hover {
   color: #253858;
   display: flex;
   align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  background: #f7f7f9;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.skill_items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill_item {
+  padding: 10px;
+  color: #253858;
   font-size: 15px;
   font-weight: bold;
   background: #f7f7f9;
