@@ -345,11 +345,16 @@ a:hover {
 /* Css styles for about section */
 
 .about {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 15px;
   padding: 0 15px;
   background-color: #fff;
   border-top-right-radius: 70px;
+}
+
+.about-myself {
+  flex: 1;
 }
 
 .about_ul {
@@ -677,29 +682,24 @@ a:hover {
   }
 
   .about {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     padding: 25px 50px;
   }
 
   .about-framework {
+    flex: 1;
     margin-top: 60px;
   }
 
   .frame_work_items {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 10px;
   }
 
   .ul_item {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 120px;
-    height: 120px;
-  }
-
-  .ul_item img {
-    margin-bottom: 15px;
+    flex-direction: row;
   }
 
   .contact_form {
