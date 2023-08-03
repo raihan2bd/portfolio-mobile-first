@@ -69,6 +69,20 @@ selectNavItems.forEach((item) => {
 // project data
 const projectData = [
   {
+    id: 'project10',
+    title: 'Resort Booking',
+    frame: ['Full-stack', 2023],
+    primaryText:
+      'Resort Booking: Your gateway to dream resorts. Discover, book, and manage your ideal getaway effortlessly with our user-friendly web app. Access comprehensive resort details, amenities, and real-time availability to plan memorable journeys hassle-free',
+    tags: ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'Ruby on Rails', 'PostgreSQL'],
+    imageUrl:
+      'https://user-images.githubusercontent.com/35267447/257567388-16d64fa7-4149-48a1-a480-05dfa0ae4efb.PNG',
+    projectDetails:
+      'Resort Booking is an innovative web application designed to empower travelers in finding and booking their dream resorts effortlessly. With an extensive collection of resorts and comprehensive details, users can explore diverse destinations, hand-picking their ideal getaway. The platform provides valuable insights into resort amenities, room types, and real-time availability, ensuring informed decision-making. Seamlessly managing bookings, users experience a hassle-free reservation process, making their vacation planning a breeze. With a user-friendly interface and an array of options, Resort Booking promises to redefine the way travelers embark on their next memorable journey.',
+    liveLink: 'https://resort-booking-front-end-c8l1.onrender.com/',
+    sourceLink: 'https://github.com/raihan2bd/resort-booking-front-end',
+  },
+  {
     id: 'project9',
     title: 'Hungry Hub',
     frame: ['E-commerce', 'Frontend', 2023],
