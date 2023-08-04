@@ -44,7 +44,8 @@ a:hover {
   min-height: 70px;
   position: fixed;
   background: #fff;
-  width: 100%;
+  left: 0;
+  right: 0;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -680,25 +681,27 @@ a:hover {
   }
 
   .work {
-    margin: 25px 100px;
+    margin: 25px 5%;
     row-gap: 71px;
   }
 
   .work_card {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 1.5rem;
   }
 
-  .work_card:nth-child(even).work_preview {
-    order: 2;
+  .work_card:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .work_preview {
-    max-width: 50%;
+    flex: 1;
   }
 
   .work_details {
-    margin-left: 15px;
+    flex: 1;
   }
 
   .about {
@@ -755,5 +758,27 @@ a:hover {
 
   .right-block {
     width: 34%;
+  }
+}
+
+@media (min-width: 1960px) {
+  .project_container {
+    margin: 0 5%;
+  }
+
+  .headline {
+    background-size: cover;
+  }
+
+  .header {
+    margin: 0 5%;
+  }
+
+  .contact_form {
+    padding-bottom: 5rem;
+  }
+
+  .contact_container {
+    width: 1000px;
   }
 }

@@ -42,6 +42,17 @@ window.onscroll = () => {
   });
 };
 
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetId = link.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
 // Navigation Menu
 const mobileMenu = document.querySelector('.header_menu');
 const navItems = document.querySelector('.mobile_nav_items');
@@ -107,7 +118,6 @@ const projectData = [
       'https://user-images.githubusercontent.com/35267447/223337938-c8ab34f0-20c6-4d8e-b47a-10558d3c7beb.PNG',
     projectDetails:
       'Hotel Bookings project built using Go and postgresql is likely a web application that allows users to search for available hotels, view room details, and make reservations. It may include features such as user authentication, and integration with third-party APIs for displaying hotel information and availability.',
-    liveLink: 'https://github.com/raihan2bd/hotel-bookings',
     sourceLink: 'https://github.com/raihan2bd/hotel-bookings',
   },
   {
@@ -191,19 +201,6 @@ const projectData = [
     liveLink: 'https://raihan2bd.github.io/code-with-raihan/',
     sourceLink: 'https://github.com/raihan2bd/code-with-raihan/',
   },
-  {
-    id: 'project4',
-    title: 'Contact Manager',
-    frame: ['Microverse', 'Front-End', 2018],
-    primaryText:
-      'Simple contract manager app using Javascript, Html and css. I fetch contact form another external api using axios and display them on the dom using javascript.',
-    tags: ['HTML', 'CSS', 'Javascript'],
-    imageUrl: './images/contact-manager.png',
-    projectDetails:
-      'Simple contract manager app using Javascript, Html and css. I fetch contact form another external api using axios and display them on the dom using javascript.',
-    liveLink: 'https://raihan2bd.github.io/contactmanager/#/',
-    sourceLink: 'https://github.com/raihan2bd/contactmanager',
-  },
 ]; // End of portfolio data
 
 // Fetch single project from projectData
@@ -282,19 +279,24 @@ function fetchOnePoject(id) {
     actions.classList.add('actions');
 
     // live link
-    const liveLink = dcl('a');
-    liveLink.classList.add('article-btn');
-    liveLink.setAttribute('href', project.liveLink);
-    liveLink.innerHTML = 'See Live <span class="btn-icon"><img src="./images/btn-live.png" alt= "Live"/></span>';
+    if (project.liveLink) {
+      const liveLink = dcl('a');
+      liveLink.classList.add('article-btn');
+      liveLink.setAttribute('href', project.liveLink);
+      liveLink.setAttribute('target', '_blank');
+      liveLink.innerHTML = 'See Live <span class="btn-icon"><img src="./images/btn-live.png" alt= "Live"/></span>';
+      actions.appendChild(liveLink);
+    }
 
     // source link
     const sourceLink = dcl('a');
     sourceLink.classList.add('article-btn');
     sourceLink.setAttribute('href', project.sourceLink);
+    sourceLink.setAttribute('target', '_blank');
     sourceLink.innerHTML = 'See Source <span class="btn-icon"><img src="./images/btn-github.png" alt= "Live"/></span>';
 
     // appending link
-    actions.append(liveLink, sourceLink);
+    actions.appendChild(sourceLink);
 
     // appending rightBlock
     rightBlock.append(workCat, actions);
@@ -327,7 +329,7 @@ function fetchOnePoject(id) {
 // this fetchAllProject function will add data in portfolio section dinamically
 function fetchAllProject() {
   // select the portfolio
-  const portfolio = document.getElementById('portfolio');
+  const portfolio = document.getElementById('projects');
   projectData.forEach((project) => {
     // Dom element for card
     const card = dcl();
